@@ -12,7 +12,7 @@ Poniżej znajduje się kod pliku `Dockerfile`, który wykorzystuje rozszerzony f
 # syntax=docker/dockerfile:1.2-labs
 
 # ==========================================
-# STAGE 1: Budowanie (Pobieranie plików po SSH)
+# STAGE 1: Budowanie
 # ==========================================
 FROM alpine AS builder
 
@@ -34,12 +34,12 @@ HEALTHCHECK --interval=10s --timeout=3s \
   CMD curl -f http://localhost/ || exit 1
 
 EXPOSE 80
-
+```
 
 
 ## 2. Budowa obrazu i wynik działania
 
-## docker build --ssh default -t lab6
+### docker build --ssh default -t lab6
 
 PS C:\Users\kacpe\lab5> docker build --ssh default -t lab6 .
 [+] Building 18.9s (13/13) FINISHED                                                                docker:desktop-linux
@@ -83,3 +83,19 @@ PS C:\Users\kacpe\lab5> docker build --ssh default -t lab6 .
  => => unpacking to docker.io/library/lab6:latest                                                                  0.1s
 
 View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/x93ljkfa2bcm932y6ver0put1
+
+
+### echo "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" | docker login ghcr.io -u k4p1-pl --password-stdin
+
+PS C:\Users\kacpe\lab5> echo "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" | docker login ghcr.io -u k4p1-pl --password-stdin
+
+Login Succeeded
+
+### docker tag lab6 ghcr.io/k4p1-pl/pawcho6:lab6
+
+
+### docker push ghcr.io/k4p1-pl/pawcho6:lab6
+
+### docker push ghcr.io/k4p1-pl/pawcho6:lab6
+
+The push refers to repository [ghcr.io/k4p1-pl/pawcho6]
