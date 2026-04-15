@@ -85,7 +85,7 @@ PS C:\Users\kacpe\lab5> docker build --ssh default -t lab6 .
 View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/x93ljkfa2bcm932y6ver0put1
 
 
-### echo "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" | docker login ghcr.io -u k4p1-pl --password-stdin
+### echo "token" | docker login ghcr.io -u k4p1-pl --password-stdin
 
 PS C:\Users\kacpe\lab5> echo "token" | docker login ghcr.io -u k4p1-pl --password-stdin
 
