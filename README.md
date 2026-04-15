@@ -87,7 +87,7 @@ View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux
 
 ### echo "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" | docker login ghcr.io -u k4p1-pl --password-stdin
 
-PS C:\Users\kacpe\lab5> echo "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" | docker login ghcr.io -u k4p1-pl --password-stdin
+PS C:\Users\kacpe\lab5> echo "token" | docker login ghcr.io -u k4p1-pl --password-stdin
 
 Login Succeeded
 
